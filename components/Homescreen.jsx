@@ -1,24 +1,33 @@
 import React from "react";
-import { Image } from "@nextui-org/react";
+import { Image, Card, CardFooter, Button, CardHeader } from "@nextui-org/react";
 
 export default function App() {
   return (
     <div>
-      <div style={{width:"700px", position:"absolute", zIndex:2, bottom:"220px", left:"200px"}}>
-        <h1 style={{fontWeight:"bold", fontSize:"45px", marginBottom:"5px"}}> Helping You Find Confidence with Refined Plastic Surgery</h1>
-        <p style={{fontSize:"20px", marginBottom:"5px"}}>
-          Helping You Find Confidence with Refined Plastic Surgery Gentle
-          surgical techniques, natural-looking results with minimal bruising,
-          thin and barely visible scars, and virtually painless surgeries.
-        </p>
-      </div>
-     <div style={{position:"relative", zIndex:1}}> <Image
-        isBlurred
-        width={1920}
-        src="https://as2.ftcdn.net/v2/jpg/05/04/36/83/1000_F_504368311_TC893HlbhfqsA5vDFIsDaU9vBuIvk1lJ.jpg"
-        alt="NextUI Album Cover"
-        classNames="m-5"
-      /></div>
+      <Card isFooterBlurred radius="lg" className="border-none">
+        <Image
+          isBlurred
+          shadow="none"
+          radius="none"
+          width={1920}
+          src="https://as2.ftcdn.net/v2/jpg/05/04/36/83/1000_F_504368311_TC893HlbhfqsA5vDFIsDaU9vBuIvk1lJ.jpg"
+          alt="NextUI Album Cover"
+          classNames="m-5"
+        />
+        <CardHeader className="absolute z-10 top-1 flex-col !items-center">
+          <p style={{
+            
+          }} 
+          className="text-black/100 uppercase font-bold max-w-[400px]">
+            Helping You Find Confidence with Refined Plastic Surgery
+          </p>
+          <h4 className="text-white font-medium text-large">
+            Gentle surgical techniques, natural-looking results with minimal
+            bruising, thin and barely visible scars, and virtually painless
+            surgeries.
+          </h4>
+        </CardHeader>
+      </Card>
     </div>
   );
 }

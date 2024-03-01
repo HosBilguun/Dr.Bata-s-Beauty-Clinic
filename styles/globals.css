@@ -31,3 +31,24 @@ body {
     text-wrap: balance;
   }
 }
+.MAbody{
+  height:400px;
+  width: 100%;
+  background-color: rgb(255, 167, 181);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 40px;
+
+}
+
+.titles{
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.fontshrinker{
+  font-size: calc(2vw + 2vh + 0.2vmin);
+
+
+}
