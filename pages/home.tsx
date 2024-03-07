@@ -4,13 +4,17 @@ import Navbar from "../components/Navbar";
 import Homescreen from "../components/Homescreen";
 import Middlepart from "../components/MiddleAdvertisement";
 import Procedures from "../components/Procedures";
-import Homepage from "./home";
 
 const inter = Inter({ subsets: ["latin"] });
 
 
 export default function Home() {
   return (
-<Homepage/>
+    <div>
+      <Navbar/>
+      <Homescreen/>
+      <Middlepart/>
+      <Procedures/>
+    </div>
   );
 }

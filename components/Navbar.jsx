@@ -29,9 +29,9 @@ export default function App() {
   ];
 
   return (
-    <div>
-      <Navbar class="bg-red-50" height={"40px"} shouldHideOnScroll>
-        <NavbarContent className="hidden sm:flex gap-20" justify="end">
+    <>
+      <Navbar className="bg-red-50" height={"40px"} shouldHideOnScroll>
+        <NavbarContent className="hidden sm:flex gap-56  w-[1024px]" justify="center">
           <NavbarItem>
             <Link color="foreground" href="#">
               Location
@@ -50,7 +50,15 @@ export default function App() {
         </NavbarContent>
       </Navbar>
       {/* <div> TUSGAARLAGCH </div> */}
-      <Navbar height={"90px"} onMenuOpenChange={setIsMenuOpen}>
+      <Navbar
+        height={"90px"}
+        onMenuOpenChange={setIsMenuOpen}
+        classNames={{
+          wrapper : "w-[1600px] max-w-[2000px]",
+          content: "justify-around gap-[5px]",
+          item: ""
+        }}
+      >
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
@@ -58,7 +66,7 @@ export default function App() {
         <NavbarBrand>
           <p className="font-bold text-inherit">Dr.Bata's beauty clinic</p>
         </NavbarBrand>
-        <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarContent className="hidden sm:flex gap-40 w-[400px] " >
           <NavbarItem>
             <Link color="foreground" href="#">
               Features
@@ -86,22 +94,26 @@ export default function App() {
           </NavbarItem>
         </NavbarContent>
         <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
+          {menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link
+                color={
+                  index === 2
+                    ? "primary"
+                    : index === menuItems.length - 1
+                    ? "danger"
+                    : "foreground"
+                }
+                className="w-full"
+                href="#"
+                size="lg"
+              >
+                {item}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
       </Navbar>
-    </div>
+    </>
   );
 }
