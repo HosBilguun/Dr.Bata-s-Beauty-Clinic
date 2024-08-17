@@ -52,9 +52,10 @@ export default function App() {
       {/* <div> TUSGAARLAGCH </div> */}
       <Navbar
         height={"90px"}
+        className="shadow-md"
         onMenuOpenChange={setIsMenuOpen}
         classNames={{
-          wrapper : "w-[1600px] max-w-[2000px]",
+          wrapper : " max-w-[2000px]",
           content: "justify-around gap-[5px]",
           item: ""
         }}
@@ -63,9 +64,13 @@ export default function App() {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
+
+       <NavbarBrand>
+          <a href="http://localhost:3000">
           <p className="font-bold text-inherit">Dr.Bata's beauty clinic</p>
+          </a>
         </NavbarBrand>
+
         <NavbarContent className="hidden sm:flex gap-40 w-[400px] " >
           <NavbarItem>
             <Link color="foreground" href="#">

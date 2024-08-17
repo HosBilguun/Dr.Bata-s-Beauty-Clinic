@@ -3,8 +3,8 @@ import { Image, Card, CardFooter, Button, CardHeader } from "@nextui-org/react";
 
 export default function App() {
   return (
-    <div>
-      <Card isFooterBlurred radius="lg" className="border-none relative">
+    <>
+      <Card isFooterBlurred radius="lg" className="relative">
         <Image
           isBlurred
           shadow="none"
@@ -13,8 +13,7 @@ export default function App() {
           alt="NextUI Album Cover"
           classNames="m-5"
         />
-        <CardHeader className="absolute z-10 max-w-[800px] 
-         flex-col">
+        <CardHeader className="absolute flex flex-col !items-center w-[70%] h-[48%] justify-end z-10">
           <p style={{
             fontSize:"40px"
           }} 
@@ -31,6 +30,6 @@ export default function App() {
           </h4>
         </CardHeader>
       </Card>
-    </div>
+    </>
   );
 }

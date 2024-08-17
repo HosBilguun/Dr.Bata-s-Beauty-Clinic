@@ -1,10 +1,17 @@
 import React from "react";
 import {Card, CardHeader, CardBody, CardFooter, Image, Button} from "@nextui-org/react";
+import { useState } from "react";
+
 
 export default function App() {
+  
   return (
-    <div className="max-w-full gap-2 grid grid-cols-12 grid-rows-2 px-8">
-    <Card className="col-span-12 sm:col-span-4 h-[300px]">
+   <Card radius="none" className="max-w-full gap-5 h-auto p-16 flex items-center justify-center bg-red-70">
+     <CardHeader className=" z-10 top-1 flex-col !items-center">
+        <h4 className="text-black font-large text-large font-bold titles mb-8 mt-4 flex flex-col !items-center">Procedures</h4>
+      </CardHeader>
+     <div className="w-[1250px] gap-6 grid grid-cols-12 grid-rows-2 px-8">
+    <Card className="col-span-12 sm:col-span-4 h-[370px]">
       <CardHeader className="absolute z-10 top-1 flex-col !items-start">
         <p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
         <h4 className="text-white font-medium text-large">Stream the Acme event</h4>
@@ -16,8 +23,8 @@ export default function App() {
         src="/images/card-example-4.jpeg"
       />
     </Card>
-    <Card className="col-span-12 sm:col-span-4 h-[300px]">
-      <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+    <Card className="col-span-12 sm:col-span-4 h-[370px]">
+      <CardHeader className="absolute z-10 top-1 flex-col !items-center justify-center">
         <p className="text-tiny text-white/60 uppercase font-bold">Plant a tree</p>
         <h4 className="text-white font-medium text-large">Contribute to the planet</h4>
       </CardHeader>
@@ -28,7 +35,7 @@ export default function App() {
         src="/images/card-example-3.jpeg"
       />
     </Card>
-    <Card className="col-span-12 sm:col-span-4 h-[300px]">
+    <Card className="col-span-12 sm:col-span-4 h-[370px]">
       <CardHeader className="absolute z-10 top-1 flex-col !items-start">
         <p className="text-tiny text-white/60 uppercase font-bold">Supercharged</p>
         <h4 className="text-white font-medium text-large">Creates beauty like a beast</h4>
@@ -40,7 +47,7 @@ export default function App() {
         src="/images/card-example-2.jpeg"
       />
     </Card>
-    <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-5">
+    <Card isFooterBlurred className="w-full h-[370px] col-span-12 sm:col-span-5">
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
         <p className="text-tiny text-white/60 uppercase font-bold">New</p>
         <h4 className="text-black font-medium text-2xl">Acme camera</h4>
@@ -61,7 +68,7 @@ export default function App() {
         </Button>
       </CardFooter>
     </Card>
-    <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
+    <Card isFooterBlurred className="w-full h-[370px] col-span-12 sm:col-span-7">
       <CardHeader className="absolute z-10 top-1 flex-col items-start">
         <p className="text-tiny text-white/60 uppercase font-bold">Your day your way</p>
         <h4 className="text-white/90 font-medium text-xl">Your checklist for better sleep</h4>
@@ -88,5 +95,6 @@ export default function App() {
       </CardFooter>
     </Card>
   </div>
+   </Card>
   );
 }

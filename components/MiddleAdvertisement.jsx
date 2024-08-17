@@ -4,8 +4,8 @@ import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nex
 
 export default function App() {
   return (
-   <div className="max-w-full h-[400px] bg-red-100">
-    <h1 className="titles flex flex-col !items-center" >Featured on</h1>
+   <div className="max-w-full h-[470px] bg-white pt-[100px]">
+    <h1 className="titles text-lg flex flex-col !items-center" >Featured on</h1>
    </div>
   );
 }
